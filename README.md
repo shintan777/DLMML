@@ -9,11 +9,11 @@ Repo for the Parser part
 link to dataset - https://drive.google.com/drive/folders/1wM7EocwGLKj5NPhHnJiPa9YvJYgaB4xJ?usp=sharing
 
 For dogs and cats structure -
-data /
-    dogs_and_cats /
-        test /
-           cats /
-           dogs /
-        train /
-            cats /
-            dogs / 
+data -
+    dogs_and_cats -
+        test -
+           cats 
+           dogs 
+        train -
+            cats 
+            dogs 
