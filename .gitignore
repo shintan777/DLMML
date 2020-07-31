@@ -130,3 +130,5 @@ dmypy.json
 
 # folder on our local which will stay on our local
 test/
+/data/*
+!/data/README.md
