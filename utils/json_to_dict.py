@@ -1,4 +1,15 @@
-class MakeNestedJson:
+class MakeDict:
+    """
+    Makes nested dict, required to process, parse and write code
+
+    Input: 
+    ------
+    inp_json : Input json (str), body of post request ideally
+    
+    Return:
+    --------
+    dict obj -> Nested dict object
+    """
 
     def __init__(self, inp_json):
         self.layers = []
