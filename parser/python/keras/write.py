@@ -11,7 +11,7 @@ from train_pipeline import compile_model, train_evaluate_model
 from visualize import add_plots_and_summary, plot_and_summarize_model
 
 
-def write_to_file(file_name, input_dict):
+def write_to_file(file_name, input_dict, output_dir = ''):
     """
     file_name: string (with extension), generated code \
                will be saved as file_name in the test dir
@@ -20,7 +20,7 @@ def write_to_file(file_name, input_dict):
     """
     try:
         inputs = input_dict
-        with open(TEST_DIR + file_name, 'w') as f:
+        with open(output_dir + file_name, 'w') as f:
             f.write(get_imports())
             f.write(add_plots_and_summary())
             f.write(image_input(inputs))
