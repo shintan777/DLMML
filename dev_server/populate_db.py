@@ -14,13 +14,16 @@ def populate(lang, lib):
     with open('schema' + os.sep + 'backend_2_frontend_schema.json', 'r') as f:
         data = json.load(f)
 
+    exceptions = {'Input',}  # set of lang and lib independent item names
     data_list = []
+
     for layer in data.keys():
         name = layer
         value = data.get(name, {})
         value['name'] = name
-        value['lang'] = lang
-        value['lib'] = lib
+        if name not in exceptions:
+            value['lang'] = lang
+            value['lib'] = lib
         data_list.append(value)
 
     collection.insert_many(data_list)

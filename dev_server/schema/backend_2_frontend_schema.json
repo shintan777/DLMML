@@ -1,5 +1,6 @@
 {
 	"Conv2D": {
+		"type": "layer",
 		"filters": {
 			"Example": 32,
 			"Default": "NA",
@@ -70,6 +71,7 @@
 	},
 
 	"Dense": {
+		"type": "layer",
 		"units": {
 			"Example": 32,
 			"Default": "NA",
@@ -118,6 +120,7 @@
 
 
 	"LSTM": {
+		"type": "layer",
 		"units": {
 			"Example": 32,
 			"Default": "NA",
@@ -196,6 +199,7 @@
 
 
 	"BaseRNN": {
+		"type": "layer",
 		"cell": {
 			"Default": "NA",
 			"Example": "cell",
@@ -208,6 +212,7 @@
 	},
 
 	"SimpleRNN": {
+		"type": "layer",
 		"units": {
 			"Example": 32,
 			"Default": "NA",
@@ -245,7 +250,7 @@
 	},
 
 	"Dropout": {
-
+		"type": "layer",
 		"rate": {
 			"Default": "NA",
 			"Example": 0.4,
@@ -275,7 +280,7 @@
 	},
 
 	"Flatten": {
-
+		"type": "layer",
 		"data_format": {
 			"Example": "channels_last",
 			"Default": "channels_last",
@@ -288,7 +293,7 @@
 
 
 	"ZeroPadding2D": {
-
+		"type": "layer",
 		"padding": {
 			"Example": [
 				[1, 1],
@@ -313,7 +318,7 @@
 	},
 
 	"AveragePooling2D": {
-
+		"type": "layer",
 		"pool_size": {
 			"Example": [2, 2],
 			"Default": "NA",
@@ -352,12 +357,8 @@
 		}
 	},
 
-
-
-
-
 	"MaxPooling2D": {
-
+		"type": "layer",
 		"pool_size": {
 			"Example": [2, 2],
 			"Default": "NA",
@@ -398,7 +399,8 @@
 
 	"Input": {
 		"name": "Input",
-		"type": {
+		"type": "input",
+		"kind": {
 			"Example": "image",
 			"Default": "None",
 			"Required": 1,
@@ -420,7 +422,7 @@
 
 	"augment": {
 		"name": "augment",
-		"input-type": "image",
+		"type": "image-options",
 
 		"rotation_range": {
 
@@ -438,7 +440,6 @@
 			"DataType": "number",
 			"Options": [],
 			"Description": "fraction of total width"
-
 		},
 
 		"height_shift_range": {
@@ -448,7 +449,6 @@
 			"DataType": "number",
 			"Options": [],
 			"Description": "fraction of total height"
-
 		},
 
 		"horizontal_flip": {
@@ -472,7 +472,7 @@
 
 	"params": {
 		"name": "params",
-		"input-type": "image",
+		"type": "image-options",
 
 		"target_size": {
 			"Example": [200, 200],
