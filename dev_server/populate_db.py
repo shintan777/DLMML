@@ -4,7 +4,7 @@ import json
 from connect_mongo import connect
 
 
-def populate():
+def populate(lang, lib):
     """
     Populate database with backend to frontend schema
     """
@@ -19,6 +19,8 @@ def populate():
         name = layer
         value = data.get(name, {})
         value['name'] = name
+        value['lang'] = lang
+        value['lib'] = lib
         data_list.append(value)
 
     collection.insert_many(data_list)
@@ -26,4 +28,6 @@ def populate():
 
 
 if __name__ == "__main__":
-    populate()
+    lang = "python"
+    lib = "keras"
+    populate(lang, lib)
