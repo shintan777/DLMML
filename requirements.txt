@@ -1,0 +1,5 @@
+tables
+flask
+pymongo
+connect-mongo
+python-dotenv
