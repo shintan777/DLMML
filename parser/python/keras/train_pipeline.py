@@ -6,6 +6,8 @@ import os
 import sys
 from pprint import pprint
 
+from .symbol_table import symbol_table
+
 
 def compile_model(inputs):
     """

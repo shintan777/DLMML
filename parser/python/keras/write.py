@@ -3,12 +3,12 @@ import os
 import sys
 from pprint import pprint
 
-from imports import get_imports
-from init import init_sequential
-from inputs import image_input
-from layers import parse
-from train_pipeline import compile_model, train_evaluate_model
-from visualize import add_plots_and_summary, plot_and_summarize_model
+from .imports import get_imports
+from .init import init_sequential
+from .inputs import image_input
+from .layers import parse
+from .train_pipeline import compile_model, train_evaluate_model
+from .visualize import add_plots_and_summary, plot_and_summarize_model
 
 
 def write_to_file(file_name, input_dict, output_dir = ''):
