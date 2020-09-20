@@ -76,6 +76,12 @@ Please take a look at our [contributing](https://github.com/Auto-DL/DLMML/blob/m
 
 - Add predict functionality to the generated model
 
+- Add different model evaluation parameters
+
+- Test for backward compatibility of libraries versions
+
+- Benchmarking parameters
+
 - Add model generation code for pytorch
 
 - Visualization and data preprocessing steps to be added
