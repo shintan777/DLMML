@@ -1,8 +1,3 @@
-"""
-write a func compile_model() which takes ip(input-dict) and compiles the model acc to layers
-returns 0, None if exec successfully else 1, error
-
-"""
 import json
 import os
 import sys
@@ -20,8 +15,8 @@ def test_compile_model(input_dict):
     """
     input_dict - dictionary of nested json
     """
-    with open('compile_test,py', 'w') as f:
-        try:
+    try:
+        with open('compile_test.py', 'w') as f:
             inputs = input_dict
             f.write(get_imports())
             f.write(add_plots_and_summary())
@@ -29,8 +24,9 @@ def test_compile_model(input_dict):
             f.write(init_sequential())
             f.write(parse(inputs))
             f.write(compile_model(inputs))
-            os.system("python compile_test.py")
-            print("Model compiled successfully")
-        except Exception as e:
-            print("Error - ", e)
-      
+        import compile_test
+        os.system('rm compile_test.py')
+        return 0, None
+    except Exception as e:
+        print("Error - ", e)
+        return 1, str(e)
