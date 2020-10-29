@@ -13,7 +13,12 @@ from .visualize import add_plots_and_summary
 
 def test_compile_model(input_dict):
     """
-    input_dict - dictionary of nested json
+    Test the model.
+
+    Parameters
+    -------------
+    input_dict - dict
+        dictionary of nested json
     """
     try:
         with open('compile_test.py', 'w') as f:

@@ -6,7 +6,12 @@ from connect_mongo import connect
 
 def populate(lang, lib):
     """
-    Populate database with backend to frontend schema
+    Populate database with backend to frontend schema.
+
+    Parameters
+    ------------
+    lang : prog language of the b2f schema
+    lib : framework of the b2f schema
     """
 
     db = connect()
