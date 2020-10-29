@@ -6,10 +6,18 @@ from pprint import pprint
 
 def image_input(inputs):
     """
-    req in input json -
-    dataset-path -> path to dataset
-    image-augment -> params for image augmentation if required
-    params -> params for building generator
+    Dataset for training.
+
+    Parameters
+    -------------
+    inputs : dict
+        Parsed input json from post request body
+    
+    Returns
+    --------
+    paths : training and test datasets
+    generaters : augmented training and test datasets
+    
     """
     base = inputs['dataset']['path']
     test_dir = os.path.join(base, 'test')

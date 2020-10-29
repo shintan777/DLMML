@@ -6,7 +6,12 @@ from pprint import pprint
 
 def get_imports():
     """
-    Imports the needed modules.
+    Import the needed modules.
+    
+    Returns
+    --------
+    import_string : str(multiline)
+        all required imports to run generated code.
     """
     try:
         return \

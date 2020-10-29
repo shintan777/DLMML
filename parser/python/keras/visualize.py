@@ -5,6 +5,19 @@ from pprint import pprint
 
 
 def add_plots_and_summary(fname="test"):
+    """
+    Plot the curve to evaluate model performance.
+    
+    Parameters 
+    -----------
+    fname : str
+        Default string with name test
+    
+    Returns
+    --------
+    adds_plots string : str(multiline)
+        Get the plot of loss and accuracy for model performance.
+    """
     return \
 """
 def summarize_diagnostics(history, save_plots):
@@ -29,6 +42,20 @@ def summarize_diagnostics(history, save_plots):
 
 
 def plot_and_summarize_model(inputs):
+    """
+    Evaluate model performance.
+    
+    Parameters 
+    -----------
+    inputs : dict
+        Parsed input json from post request.
+        
+    Returns
+    --------
+    evaluate_string : str
+        Get the model performance
+    
+    """
     if eval(inputs.get('plot', False)):
         return \
 """
