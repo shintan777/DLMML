@@ -20,8 +20,12 @@ def generate_code(inputs, filename="test.py", output_dir=''):
     
     output_dir : str
         empty string
-    
 
+    Returns
+    --------
+    status_tuple: tuple
+        tuple with exit_code (0: No error, 1: error)
+                   Exception object
     """
     try:
         write_to_file(filename, inputs, output_dir)
