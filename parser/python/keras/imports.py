@@ -25,10 +25,11 @@ from matplotlib import pyplot
 from keras.utils import to_categorical
 from keras.models import Sequential
 from keras.layers import Conv2D
-from keras.layers import MaxPooling2D
+from keras.layers import MaxPooling2D, ZeroPadding2D, AveragePooling2D
 from keras.layers import Dense
-from keras.layers import Flatten
-from keras.optimizers import SGD
+from keras.layers import Flatten, Dropout
+from keras.layers import BaseRNN, SimpleRNN, LSTM
+from keras.optimizers import SGD, RMSprop, Adam, Adagrad, Adadelta
 from keras.preprocessing.image import ImageDataGenerator
 """
     except Exception as e:
